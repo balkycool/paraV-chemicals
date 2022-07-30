@@ -10,6 +10,7 @@ img {
 
 body {
     font-family: Jost, Arial, sans-serif;
+    padding-top: 76px;
     transition: 0.2s ease all;
 }
 
@@ -46,7 +47,15 @@ body {
 
 /* Base setup ends */
 
-.header {}
+header {
+    background-color: #fff;
+    box-shadow: 0 -5px 10px 0px #888;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
 
 .header_logo img {
     max-width: 160px;
@@ -160,31 +169,65 @@ body {
 
 /*Product page starts*/
 
+.banner-image {
+    left: 0;
+    position: fixed;
+    top: 76px;
+    width: 100%;
+    z-index: -1;
+}
+
 .product-main-content {
     background: #fff;
-    box-shadow: 0px 0px 10px 0px #0c0c0c;
     padding: 40px 50px;
     position: relative;
 }
 
 section.product-main {
-    margin-bottom: 70px;
-    margin-top: -340px;
+    margin-top: 230px;
 }
 
 h1.product-main-title {
-    border-bottom: 1px solid #ff3100;
-    margin-bottom: 30px;
+    font-size: 60px;
+    margin-bottom: 110px;
     padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.product-main-content ul li {
+h1.product-main-title span {
+    background: rgb(255 255 255 / 70%);
+    display: inline-block;
+    padding: 0 10px;
+}
+
+ul.product-service-list {
+    background-image: url(../images/chemicals-service-list-bg.jpg);
+    background-size: cover;
+    padding: 30px 30px 15px;
+    position: relative;
+}
+
+ul.product-service-list:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+ul.product-service-list li {
     font-weight: 500;
     list-style: none;
     margin-bottom: 10px;
+    position: relative;
 }
 
-.product-main-content ul li i {
+ul.product-service-list li i {
     color: green;
     font-size: 20px;
     margin-right: 10px;
@@ -192,12 +235,62 @@ h1.product-main-title {
     top: 2px;
 }
 
+/* ol.breadcrumb {
+    position: relative;
+}
+
+li.breadcrumb-item {
+    background: #ccc;
+    position: relative;
+}
+
+li.breadcrumb-item+li.breadcrumb-item {
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+li.breadcrumb-item a {
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '';
+    position: absolute;
+    border: 12px solid transparent;
+    border-left-color: #fff;
+    height: 24px;
+    left: 2px;
+    width: 24px;
+}
+
+.breadcrumb-item+.breadcrumb-item::after {
+    content: '';
+    position: absolute;
+    border: 12px solid transparent;
+    border-left-color: #ccc;
+    height: 24px;
+    left: 0;
+    width: 24px;
+}
+
+.breadcrumb::after {
+    content: '';
+    position: absolute;
+    border: 12px solid transparent;
+    border-left-color: #ccc;
+    height: 24px;
+    right: -9px;
+    width: 24px;
+} */
+
 /*Footer starts*/
 
 footer {
     background-color: #262626;
     color: #fff;
     padding: 60px 0;
+    position: relative;
 }
 
 footer h4 {
